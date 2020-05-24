@@ -4,3 +4,8 @@
 /* You will use this CSS file for each of your projects. Simply add new CSS classes and elements to the end of the file. */
 
 /* Be careful to keep your selector names unique to avoid collisions, which can cause confusion. */
+
+/* Style for main header for Personal page (index.html)*/
+._main_header {
+    color: #778899;
+}
