@@ -9,3 +9,13 @@
 ._main_header {
     color: #778899;
 }
+
+#about_me {
+    text-align:left;
+    color:navy;
+
+}
+#about_me h2 {
+    text-align:center;
+    text-indent:0px;
+}
