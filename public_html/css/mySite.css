@@ -19,3 +19,8 @@
 }
 #hobby_text2 {
 }
+
+table.schedule, th.schedule, td.schedule {
+    border: 1px solid black;
+    text-align: center;
+}
