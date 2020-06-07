@@ -9,6 +9,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 /* --------------------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------- Style for all pages ---------------------------------------------- */
+body {
+    background-color: #282828;
+    color: #ebdbb2;
+    font-family: 'Roboto Mono', monospace;
+}
+
 a:link {
     color: #458588;
 }
@@ -17,6 +23,7 @@ a:visited {
 }
 /* --------------------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------Style for Personal page (index.html)--------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------------- */
 h1.personal_header {
     color: #fe8019;
     font-family: 'Roboto Mono', monospace;
@@ -58,7 +65,8 @@ h2.education {
 }
 
 /* --------------------------------------------------------------------------------------------------------------------- */
-/* ----------------------------------------Style for Schedule page (schedule.html)-------------------------------------- */
+/* --------------------------------------- Style for Schedule page (schedule.html) ------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------------- */
 .schedule_body {
     background-color: #282828;
     color: #ebdbb2;
@@ -91,4 +99,119 @@ h2.schedule_h2 {
 
 .ol_level1 {
     text-align left;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------- Style for Account page (account.html) --------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+
+.text_inp {
+    background-color: #f9f5d7;
+}
+
+/* separate programming language radio buttons into two columns */
+.prog_lang {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+
+.radio_1thru4 {
+    text-align: left;    
+}
+
+.radio_5thru8 {
+    text-align: right;
+}
+
+/* Create custom radio buttons for Majors */
+.major_radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.major_radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+.radio_check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+
+.major_radio input:checked ~ .radio_check {
+    background-color: green;
+}
+
+.major_radio input:checked ~ .radio_check:after {
+    display: block;
+}
+
+/* Create custom checkbox buttons for Programming languages */
+
+/* Create a custom checkbox label */
+.prog_lang_label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* hide the default checkbox */
+.prog_lang_label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* create custom checkmark */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: grey;
+}
+
+/* set the background of the selected checkboxes to blue */
+.prog_lang_label input:checked ~ .checkmark {
+    background-color: blue;
+}
+
+.prog_lang_label input:checked ~ .checkmark:after {
+    display: black;
+}
+
+/* set the background of the unseleccted checkboxes to grey */
+.prog_lang_label .checkmark:after {
+    background-color: grey;
 }

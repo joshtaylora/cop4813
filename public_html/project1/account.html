@@ -10,77 +10,100 @@
 <body>
     <form action="https://unfinishedbusiness.app/alert.php" method="post">
         <div>
-            <label for="fName">First Name</label>
-            <input type="text" id="fName" name="first_name">
+            <label for="fName">First Name
+                <input class="text_inp" type="text" id="fName" name="first_name">
+            </label><br>
+            <label for="lName">Last Name
+                <input class="text_inp" type="text" id="lName" name="last_name">
+            </label><br>
+            <label for="eMail">Email Address
+                <input class="text_inp" type="text" id="eMail" name="email_address">
+            </label><br>
+            <label for="password">Password
+                <input class="text_inp" type="password" id="password" name="password">
+            </label><br>
+            <label for="confPass">Confirm Password
+                <input class="text_inp" type="password" id="confPass" name="confirm_password">
+            </label><br>
+            <label for="bdate">Birth Date
+                <input class="text_inp" type="date" id="bdate" min="1970-01-01" max="2025-12-31" value="2015-10-21">
+            </label>
+        </div>
+        <p id="major_p">Major</p>
+        <div>
+            <label class="major_radio" for="compSci"><a href="https://www.unf.edu/ccec/computing/Computer_Science_Program.aspx" target="_blank">Computer Science</a>
+                <input type="radio" name="major" id="compSci" value="ComputerScience">
+                <span class="radio_check"></span>
+            </label>
         </div>
         <div>
-            <label for="lName">Last Name</label>
-            <input type="text" id="lName" name="last_name">
+            <label class="major_radio" for="infoSci"><a href="https://www.unf.edu/ccec/computing/Information_Science_Program.aspx" target="_blank">Information Science</a>
+                <input type="radio" name="major" id="infoSci" value="InformationScience">
+                <span class="radio_check"></span>
+            </label>
         </div>
         <div>
-            <label for="eMail">Email Address</label>
-            <input type="text" id="eMail" name="email_address">
+            <label class="major_radio" for="infoSys"><a href="https://www.unf.edu/ccec/computing/Information_Science_Program.aspx" target="_blank">Information Science</a>
+                <input type="radio" name="major" id="infoSys" value="InformationSystems">
+                <span class="radio_check"></span>
+            </label>
         </div>
         <div>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password">
-        </div>
-        <div>
-            <label for="confPass">Confirm Password</label>
-            <input type="password" id="confPass" name="confirm_password">
-        </div>
-        <div>
-            <input type="date" min="1970-01-01" max="2025-12-31" value="2015-10-21">
-        </div>
-        <p>Major</p>
-        <div>
-            <input type="radio" name="major" id="compSci" value="ComputerScience">
-            <label for="compSci"><a href="https://www.unf.edu/ccec/computing/Computer_Science_Program.aspx" target="_blank">Computer Science</a></label>
-        </div>
-        <div>
-            <input type="radio" name="major" id="infoSci" value="InformationScience">
-            <label for="infoSci"><a href="https://www.unf.edu/ccec/computing/Information_Science_Program.aspx" target="_blank">Information Science</a></label>
-        </div>
-        <div>
-            <input type="radio" name="major" id="infoSys" value="InformationSystems">
-            <label for="infoSys"><a href="https://www.unf.edu/ccec/computing/Information_Science_Program.aspx" target="_blank">Information Science</a></label>
-        </div>
-        <div>
-            <input type="radio" name="major" id="infoTech" value="InformationTechnology">
-            <label for="infoTech"><a href="https://www.unf.edu/ccec/computing/Information_Technology_Program.aspx" target="_blank">Information Technology</a></label>
+            <label class="major_radio" for="infoTech"><a href="https://www.unf.edu/ccec/computing/Information_Technology_Program.aspx" target="_blank">Information Technology</a>
+                <input type="radio" name="major" id="infoTech" value="InformationTechnology">
+                <span class="radio_check"></span>
+            </label>
         </div>
         <p>Programming Language Experience</p>
-        <div>
-            <input type="checkbox" name="programming" id="c" value="C">
-            <label for="c"><a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">C</a></label>
-        </div>
-        <div>
-            <input type="checkbox" name="programming" id="cSharp" value="C#">
-            <label for="cSharp"><a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank">C#</a></label>
-        </div>
-        <div>
-            <input type="checkbox" name="programming" id="java" value="Java">
-            <label for="java"><a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank">Java</a></label>
-        </div>
-        <div>
-            <input type="checkbox" name="programming" id="javascript" value="JavaScript">
-            <label for="javascript"><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></label>
-        </div>
-        <div>
-            <input type="checkbox" name="programming" id="php" value="PHP">
-            <label for="php"><a href="https://en.wikipedia.org/wiki/PHP" target="_blank">PHP</a></label>
-        </div>
-        <div>
-            <input type="checkbox" name="programming" id="python" value="Python">
-            <label for="python"><a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python</a></label>
-        </div>
-        <div>
-            <input type="checkbox" name="programming" id="visBasic" value="Visual_Basic">
-            <label for="visBasic"><a href="https://en.wikipedia.org/wiki/Visual_Basic" target="_blank">Visual Basic</a></label>
-        </div>
-        <div>
-            <input type="checkbox" name="programming" id="other" value="Other">
-            <label for="other">Other</label>
+        <div class="prog_lang">
+                <div class="radio_1thru4">
+                    <label class="prog_lang_label" for="c"><a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">C</a>
+                        <input type="checkbox" name="programming" id="c" value="C">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="radio_1thru4">
+                    <label class="prog_lang_label" for="cSharp"><a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank">C#</a>
+                        <input type="checkbox" name="programming" id="cSharp" value="C#">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="radio_1thru4">
+                    <label class="prog_lang_label" for="java"><a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank">Java</a>
+                        <input type="checkbox" name="programming" id="java" value="Java">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="radio_1thru4">
+                    <label class="prog_lang_label" for="javascript"><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
+                        <input type="checkbox" name="programming" id="javascript" value="JavaScript">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="radio_5thru8">
+                    <label class="prog_lang_label" for="php"><a href="https://en.wikipedia.org/wiki/PHP" target="_blank">PHP</a>
+                        <input type="checkbox" name="programming" id="php" value="PHP">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="radio_5thru8">
+                    <label class="prog_lang_label" for="python"><a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python</a>
+                        <input type="checkbox" name="programming" id="python" value="Python">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="radio_5thru8">
+                    <label class="prog_lang_label" for="visBasic"><a href="https://en.wikipedia.org/wiki/Visual_Basic" target="_blank">Visual Basic</a>
+                        <input type="checkbox" name="programming" id="visBasic" value="Visual_Basic">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="radio_5thru8">
+                    <label class="prog_lang_label" for="other">Other
+                        <input type="checkbox" name="programming" id="other" value="Other">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
         </div>
         <div>
             <input type="reset" id="rst">
