@@ -4,23 +4,91 @@
 /* You will use this CSS file for each of your projects. Simply add new CSS classes and elements to the end of the file. */
 
 /* Be careful to keep your selector names unique to avoid collisions, which can cause confusion. */
-
-/* Style for main header for Personal page (index.html)*/
-._main_header {
-    color: #778899;
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------import font family-------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------- Style for all pages ---------------------------------------------- */
+a:link {
+    color: #458588;
+}
+a:visited {
+    color: #d3869b;
+}
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------Style for Personal page (index.html)--------------------------------------- */
+h1.personal_header {
+    color: #fe8019;
+    font-family: 'Roboto Mono', monospace;
 }
 
-#about_me {
-    text-align:left;
-    color:#2C344D;
+.personal_body {
+    background-color: #282828;
+    color: #ebdbb2;
+    font-family: 'Roboto Mono', monospace;
+}
 
+h2.about_me {
+    text-align: left;
+    color: #fb4934;
 }
-#hobby_text1 {
+
+h2.hobbies {
+    color: #b8bb26;
 }
-#hobby_text2 {
+
+h2.education {
+    color: #fabd2f;
+}
+
+.college_degree {
+    font-weight: bold;
+}
+
+.high_school {
+    font-style: italic;
+}
+
+.certification {
+    text-decoration: underline;
+}
+
+.link:hover {
+    font-size: 150%;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------Style for Schedule page (schedule.html)-------------------------------------- */
+.schedule_body {
+    background-color: #282828;
+    color: #ebdbb2;
+    font-family: 'Roboto Mono', monospace;
+    text-align: left;
+    margin: auto;
+    width: 50%;
 }
 
 table.schedule, th.schedule, td.schedule {
-    border: 1px solid black;
+    border: 1px solid #d5c4a1;
     text-align: center;
+    margin: auto;
+}
+
+h2.schedule_h2 {
+    color: #fb4934;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.important_events {
+    text-align center;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.ol_level1 {
+    text-align left;
 }
