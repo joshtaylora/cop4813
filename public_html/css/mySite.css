@@ -25,7 +25,7 @@ a:visited {
 /* ------------------------------------------Style for Personal page (index.html)--------------------------------------- */
 /* --------------------------------------------------------------------------------------------------------------------- */
 h1.personal_header {
-    color: #fe8019;
+    color: #fb4934;
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -37,7 +37,7 @@ h1.personal_header {
 
 h2.about_me {
     text-align: left;
-    color: #fb4934;
+    color: #fe8019;
 }
 
 h2.hobbies {
@@ -76,8 +76,24 @@ h2.education {
     width: 50%;
 }
 
+th.schedule {
+    color: #98971a;
+}
+
+
+tr:nth-child(even) {
+    background-color: #fbf1c7;
+    color: #282828;
+}
+
+
+.row2 {
+    background-color: #fabd2f;
+    color: #282828;
+}
+
 table.schedule, th.schedule, td.schedule {
-    border: 1px solid #d5c4a1;
+    /*border: 1px solid #d5c4a1;*/
     text-align: center;
     margin: auto;
 }
@@ -101,29 +117,49 @@ h2.schedule_h2 {
     text-align left;
 }
 
+.my_links {
+    text-align: center;
+}
 
 /* --------------------------------------------------------------------------------------------------------------------- */
 /* --------------------------------------- Style for Account page (account.html) --------------------------------------- */
 /* --------------------------------------------------------------------------------------------------------------------- */
 
+.accnt_body {
+}
+
+#accnt_header {
+    color: #fb4934;
+}
 
 .text_inp {
     background-color: #f9f5d7;
 }
 
+h3 {
+    color: #b8bb26;
+}
+
 /* separate programming language radio buttons into two columns */
-.prog_lang {
-    text-align: center;
-    margin: auto;
-    width: 50%;
+.radiocol1 {
+    float: left;
+    width: 10%;
 }
 
-.radio_1thru4 {
-    text-align: left;    
+
+.radiocol2 {
+    float: right;
+    width: 90%;
 }
 
-.radio_5thru8 {
-    text-align: right;
+.radiorow {
+    /*text-align: center*/
+}
+
+.radiorow:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* Create custom radio buttons for Majors */
@@ -142,7 +178,6 @@ h2.schedule_h2 {
 
 
 .major_radio input {
-    position: absolute;
     opacity: 0;
     cursor: pointer;
 }
@@ -173,8 +208,8 @@ h2.schedule_h2 {
 .prog_lang_label {
     display: block;
     position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
+    padding-left: 25px;
+    margin-bottom: 8px;
     cursor: pointer;
     font-size: 16px;
     -webkit-user-select: none;
@@ -185,7 +220,7 @@ h2.schedule_h2 {
 
 /* hide the default checkbox */
 .prog_lang_label input {
-    position: absolute;
+    position: absolute; /* originally absolute */
     opacity: 0;
     cursor: pointer;
     height: 0;
@@ -194,7 +229,7 @@ h2.schedule_h2 {
 
 /* create custom checkmark */
 .checkmark {
-    position: absolute;
+    position: absolute; /* originally absolute */
     top: 0;
     left: 0;
     height: 16px;
