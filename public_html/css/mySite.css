@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "default.css";
 /* DO NOT MODIFY THE @import STATEMENT ABOVE */
 
@@ -272,3 +273,257 @@ h3 {
     color: #282828;
 
 }
+=======
+@import "default.css";
+/* DO NOT MODIFY THE @import STATEMENT ABOVE */
+
+/* You will use this CSS file for each of your projects. Simply add new CSS classes and elements to the end of the file. */
+
+/* Be careful to keep your selector names unique to avoid collisions, which can cause confusion. */
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------import font family-------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------- Style for all pages ---------------------------------------------- */
+body {
+    background-color: #282828;
+    color: #ebdbb2;
+    font-family: 'Roboto Mono', monospace;
+}
+
+a:link {
+    color: #458588;
+}
+a:visited {
+    color: #d3869b;
+}
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------Style for Personal page (index.html)--------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------------- */
+h1.personal_header {
+    color: #fb4934;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.personal_body {
+    background-color: #282828;
+    color: #ebdbb2;
+    font-family: 'Roboto Mono', monospace;
+}
+
+h2.about_me {
+    text-align: left;
+    color: #fe8019;
+}
+
+h2.hobbies {
+    color: #b8bb26;
+}
+
+h2.education {
+    color: #fabd2f;
+}
+
+.college_degree {
+    font-weight: bold;
+}
+
+.high_school {
+    font-style: italic;
+}
+
+.certification {
+    text-decoration: underline;
+}
+
+.link:hover {
+    font-size: 150%;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------- Style for Schedule page (schedule.html) ------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------------- */
+.schedule_body {
+    background-color: #282828;
+    color: #ebdbb2;
+    font-family: 'Roboto Mono', monospace;
+    text-align: left;
+    margin: auto;
+    width: 50%;
+}
+
+th.schedule {
+    color: #98971a;
+}
+
+
+tr:nth-child(even) {
+    background-color: #fbf1c7;
+    color: #282828;
+}
+
+
+.row2 {
+    background-color: #fabd2f;
+    color: #282828;
+}
+
+table.schedule, th.schedule, td.schedule {
+    /*border: 1px solid #d5c4a1;*/
+    text-align: center;
+    margin: auto;
+}
+
+h2.schedule_h2 {
+    color: #fb4934;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.important_events {
+    text-align center;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.ol_level1 {
+    text-align left;
+}
+
+.my_links {
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------- Style for Account page (account.html) --------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+.accnt_body {
+}
+
+#accnt_header {
+    color: #fb4934;
+}
+
+.text_inp {
+    background-color: #f9f5d7;
+}
+
+h3 {
+    color: #b8bb26;
+}
+
+/* separate programming language radio buttons into two columns */
+.radiocol1 {
+    float: left;
+    width: 10%;
+}
+
+
+.radiocol2 {
+    float: right;
+    width: 90%;
+}
+
+.radiorow {
+    /*text-align: center*/
+}
+
+.radiorow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Create custom radio buttons for Majors */
+.major_radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.major_radio input {
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+.radio_check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+
+.major_radio input:checked ~ .radio_check {
+    background-color: green;
+}
+
+.major_radio input:checked ~ .radio_check:after {
+    display: block;
+}
+
+/* Create custom checkbox buttons for Programming languages */
+
+/* Create a custom checkbox label */
+.prog_lang_label {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* hide the default checkbox */
+.prog_lang_label input {
+    position: absolute; /* originally absolute */
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* create custom checkmark */
+.checkmark {
+    position: absolute; /* originally absolute */
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: grey;
+}
+
+/* set the background of the selected checkboxes to blue */
+.prog_lang_label input:checked ~ .checkmark {
+    background-color: blue;
+}
+
+.prog_lang_label input:checked ~ .checkmark:after {
+    display: black;
+}
+
+/* set the background of the unseleccted checkboxes to grey */
+.prog_lang_label .checkmark:after {
+    background-color: grey;
+}
+>>>>>>> 2728366d42706e98ad03495c2453e4ff1560b2c6
