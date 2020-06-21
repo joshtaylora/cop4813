@@ -31,79 +31,16 @@ function validateControl(control, name, length) {
 }
 
 function validateCreditCard(value) {
-    var creditCard = {
-        amex: {
-            firstDigit: 3,
-            length: 15
-        },
-        discover: {
-            firstDigit: 6,
-            length: 16
-        },
-        masterCard: {
-            firstDigit: 5,
-            length: 16
-        },
-        visa: {
-            firstDigit: 4,
-            length: 16
-        }
-    };
-    var cardVal = value.trim();
-    cardVal = cardVal.split("");
-
-    if (testNumber(cardVal)) {
-        if (cardVal[0] == creditCard.amex.firstDigit) {
-            if (testLength(cardVal.length, creditCard.amex.length)) {
-                return true;
-            }
-            // if the first digit matches a valid card but the length does not match -> return false
-            else {
-                return false;
-            }
-        }
-        else if (cardVal[0] == creditCard.discover.firstDigit) {
-            if (testLength(cardVal.length, creditCard.discover.length)) {
-                return true;
-            }
-            // if the first digit matches a valid card but the length does not match -> return false
-            else {
-                return false;
-            }
-        }
-        else if (cardVal[0] == creditCard.masterCard.firstDigit) {
-            if (testLength(cardVal.length, creditCard.masterCard.length)) {
-                return true;
-            }
-            // if the first digit matches a valid card but the length does not match -> return false
-            else {
-                return false;
-            }
-        }
-        else if (cardVal[0] == creditCard.visa.firstDigit) {
-            if (testLength(cardVal.length, creditCard.visa.length)) {
-                return true;
-            }
-            // if the first digit matches a valid card but the length does not match -> return false
-            else {
-                return false;
-            }
-        }
-        // if testNumber passes but the first digit does not match a valid credit card -> return false
-        else {
-            return false;
-        }
-    }
-    // testNumber fails -> return false
-    else {
-        return false;
-    }
+    console.log(value);
 }
 
 function validateEmail(value) {
+    console.log(`validateEmail function: email=${value}`)
     // use a regular expression to determine if value conforms to a typical email address
-    var email = /\w@\w\.\w/;
-    if (email.test(value)) {
+    var email = /([a-z]|[A-Z])+@([a-z]|[A-Z])+\.([a-z]|[A-Z])+/;
+    // uncomment out to test if email input matches the RegEx
+    console.log(`${email.exec(value)[0]}`);
+    if (email.exec(value)[0] === value) {
         return true;
     }
     else {
@@ -118,20 +55,21 @@ function validateState(value) {
 }
 
 function validateForm() {
-    console.log("validateForm function entered");
     // call each of the functions to validate all of the form fields
+    // validate the credit card number
     var creditCard = document.getElementById("p2cardnum");
+    var creditCardNum = document.getElementById("p2cardnum").value;
+    validateCreditCard(creditCardNum);
+
     var cvc = document.getElementById("p2CVC");
-    var email = document.getElementById("p2zip");
+    var email = document.getElementById("p2email");
     var date = document.getElementById("p2expdate");
     var state = document.getElementById("p2state");
     var zip = document.getElementById("p2zip");
-    // validate credit card input id = p2cardnum
-    validateCreditCard(creditCard.value);
     // validate cvc/cvv2
-    validateControl(cvc, "cvc/cvv2", 3);
+    //validateControl(cvc, "cvc/cvv2", 3);
     // validate email
-    validateEmail(email.value);
+    //validateEmail(email.value);
     // validate date
     //validateDate(date.value);
     // validate state
@@ -140,6 +78,7 @@ function validateForm() {
     //validateControl(zip, "zip", 5);
 
 }
+
 
 var submit = document.getElementById("p2submit");
 submit.addEventListener("submit", validateForm());
