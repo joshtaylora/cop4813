@@ -102,6 +102,14 @@ function validateCreditCard(value) {
 
 function validateEmail(value) {
     // use a regular expression to determine if value conforms to a typical email address
+    var email = /\w@\w\.\w/;
+    if (email.test(value)) {
+        return true;
+    }
+    else {
+        console.log("User defined email does not match a valid email address");
+        return false;
+    }
 }
 
 function validateState(value) {
@@ -110,6 +118,7 @@ function validateState(value) {
 }
 
 function validateForm() {
+    console.log("validateForm function entered");
     // call each of the functions to validate all of the form fields
     var creditCard = document.getElementById("p2cardnum");
     var cvc = document.getElementById("p2CVC");
@@ -118,17 +127,19 @@ function validateForm() {
     var state = document.getElementById("p2state");
     var zip = document.getElementById("p2zip");
     // validate credit card input id = p2cardnum
-    validateCreditCard(creditCard.firstChild.nodeValue);
+    validateCreditCard(creditCard.value);
     // validate cvc/cvv2
-    validateControl(cvv, "cvc/cvv2", 3);
+    validateControl(cvc, "cvc/cvv2", 3);
     // validate email
-    validateEmail(email.firstChild.nodeValue);;
+    validateEmail(email.value);
     // validate date
-    validateDate(date.firstChild.nodeValue);
+    //validateDate(date.value);
     // validate state
-    validateState(state.firstChild.nodeValue);
+    //validateState(state.value);
     // validate zip
-    validateControl(zip, "zip", 5);
+    //validateControl(zip, "zip", 5);
 
 }
 
+var submit = document.getElementById("p2submit");
+submit.addEventListener("submit", validateForm());
