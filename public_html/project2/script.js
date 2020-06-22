@@ -1,5 +1,7 @@
 function testLength(value, length) {
-    if (value.length === length) {
+    console.log("-------------------------------- testLength ----------------------------------");
+    console.log(`value.length: ${value.length}, length: ${length}`);
+    if (value.length == length) {
         return true;
     }
     else {
@@ -8,6 +10,7 @@ function testLength(value, length) {
 }
 
 function testNumber(value) {
+    console.log("---------------------------------- testNumber ----------------------------------------");
     if (!(isNaN(value))) {
         return true;
     }
@@ -17,15 +20,19 @@ function testNumber(value) {
 }
 
 function validateControl(control, name, length) {
-    if (testLength(control, length)) {
-        if (testNumber(control.nodeValue)) {
+    console.log("----------------------------- validateControl -----------------------------------");
+    console.log(`control.value: ${control.value}, control.value.length: ${control.value.length}, expected length: ${length}`)
+    if (testLength(control.value, length)) {
+        if (testNumber(control.value)) {
             return true;
         }
         else {
+            console.log("Error: value is not a number");
             return false;
         }
     }
     else {
+        console.log("Error: number not correct length");
         return false;
     }
 }
@@ -105,7 +112,7 @@ function validateEmail(value) {
 
 function validateState(value) {
     // test whether the select state option is currently selected
-    window.log(value);
+    console.log(value);
 }
 
 function validateForm() {
@@ -114,21 +121,29 @@ function validateForm() {
     var creditCard = document.getElementById("p2cardnum");
     // uncomment out to test validator function without submitting form
     //creditCard.addEventListener("input", validateCreditCard(creditCard.value));
-    validateCreditCard(creditCard.value);
+    //validateCreditCard(creditCard.value);
+
     // validate cvc/cvv2
-    validateControl(cvc, "cvc/cvv2", 3);
     var cvc = document.getElementById("p2CVC");
-    var email = document.getElementById("p2email");
-    var date = document.getElementById("p2expdate");
-    var state = document.getElementById("p2state");
-    var zip = document.getElementById("p2zip");
+    cvc.addEventListener("input", validateControl(cvc, "CVC/CVV2", 3));
+
     // validate email
+    var email = document.getElementById("p2email");
     //validateEmail(email.value);
-    // validate date
+    // uncomment out to test validator function without submitting form
+    email.addEventListener("input", validateEmail(email.value));
+
+    // validate expiration date
+    var date = document.getElementById("p2expdate");
     //validateDate(date.value);
-    // validate state
+
+    // validate state drop down menu value
+    var state = document.getElementById("p2state");
+    state.addEventListener("input", validateState(state.value));
     //validateState(state.value);
-    // validate zip
+    
+    // validate zip code value
+    var zip = document.getElementById("p2zip");
     //validateControl(zip, "zip", 5);
 
 }
