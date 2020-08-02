@@ -9,7 +9,17 @@
 		<h3>Welcome, <?= $_SESSION["displayName"] ?> (<a href="javascript: confirmLogout()">logout</a>)</h3>
 		<h1>myMovies Xpress!</h1>
 <!-- DO NOT REMOVE OR MODIFY THE CODE OR PLACE YOUR CODE ABOVE THIS LINE -->
-		
+	
+	<form action="./search.php" method="post">
+		<label for="keyword">Keyword</label>
+		<input type="text" id="keyword" name="keyword" required/><br>
+		<label for="cancel">Cancel</label>
+		<input type="button" id="cancel" name="cancel" value="Cancel" onclick="javascript: confirmCancel()"/><br>
+		<label for="reset">Clear</label>
+		<input type="reset" id="reset" name="reset"/><br>
+		<label for="submit">Search</label>
+		<input type="submit" id="submit"/>
+	</form>	
 
 <!-- DO NOT REMOVE OR MODIFY THE CODE OR PLACE YOUR CODE BELOW THIS LINE -->		
 	</body>

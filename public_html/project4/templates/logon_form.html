@@ -9,9 +9,21 @@
 		<h1>myMovies Xpress!</h1>
 		<p style="color: red;"><?= $message ?></p>
 <!-- DO NOT REMOVE OR MODIFY THE CODE OR PLACE YOUR CODE ABOVE THIS LINE -->
-		<form action="./logon.php" method="post">
-			
-		</form>
+	<form action="./logon.php" method="post">
+		<label for="username">Username:</label>
+		<input type="text" required id="username" name="username"><br>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password"><br>
+		<br>
+		<label for="reset">Clear</label>
+		<input type="reset" id="reset"><br>
+		<label for="submit">Login</label>
+		<input type="submit" id="submit" name="submit"><br>
+		<input type="hidden" name="action" value="login" />
+		<a href="./logon.php?form=create">Create Account</a>
+		<a href="./logon.php?form=forgot">Forgot Password</a>
+	</form>
+	<a href="../index.php">ePortfolio</a>
 
 <!-- DO NOT REMOVE OR MODIFY THE CODE OR PLACE YOUR CODE BELOW THIS LINE -->
 	</body>

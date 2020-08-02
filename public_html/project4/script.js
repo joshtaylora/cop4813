@@ -44,25 +44,52 @@ function showModalWindow()
 
 function addMovie(imdbID)
 {
-	
+	window.location.replace("./index.php?action=add&imdb_id=" + imdbID);
+	return true;
 }
 
 function confirmCancel()
 {
-	
+	if (window.confirm("Do you want to continue to your shopping cart?")){
+		window.location.replace("./index.php");
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
 function confirmCheckout()
 {
-	
+	if (window.confirm("Do you want to checkout?")){
+		window.location.replace("./index.php?action=checkout");
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
 function confirmLogout()
 {
-	
+
+	if (window.confirm("Do you want to logout?")){
+		window.location.replace("./logon.php?action=logoff");
+		return true;
+	}
+	else {
+		return false;
+	}
+
 }
 
 function confirmRemove(title, movieID)
 {
-	
+	if (window.confirm("Do you want to remove " + title + " from your shopping cart?")) {
+		window.location.replace("./index.php?action=remove&movie_id=" + movieID);
+		return true;
+	}
+	else {
+		return false;
+	}
 }
